@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS | MySQL Database</title>
+    <link rel="stylesheet" href="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\adddeletecolumn.css">
+</head>
+<body>
+<section>
+    <h2>MySQL Database</h2>
+    <h2 id="h2">Create Database</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>A database is used to store the collection of records in an organized form. It allows us to hold the data into tables, rows, columns, and indexes to find the relevant information frequently. We can access and manage the records through the database very easily.</p>
+    <br>
+    <p>MySQL implements a database as a directory that stores all files in the form of a table. It allows us to create a database mainly in two ways:</p>    
+    <br>
+    <p>1. MySQL Command Line Client</p>
+    <p>2. MySQL Workbench</p>
+    <br>
+    <h2>MySQL Command Line Client</h2>
+    <br>
+    <br>
+    <p>We can create a new database in MySQL by using the CREATE DATABASE statement with the below syntax:</p>
+    <br>
+    <!-- Syntax-------------------------------- -->
+    <div class="syntax">CREATE DATABASE [IF NOT EXISTS] database_name  <br>
+        [CHARACTER SET charset_name]  <br>
+        [COLLATE collation_name];<br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> CREATE DATABASE employeesdb;  
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-create-database.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        <div class="command">
+            mysql> CREATE DATABASE employeesdb;  
+            <br>
+        </div>
+    
+    
+            <br><br>
+            <h2 id="h2">MySQL SELECT Database</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>SELECT Database is used in MySQL to select a particular database to work with. This query is used when multiple databases are available with MySQL Server.</p>
+    <br>
+    <p>You can use SQL command USE to select a particular database.</p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <div class="syntax">USE database_name;  
+        
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            USE customers;   
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysqlselectdatabase.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+    
+            <br><br>
+            <h2 id="h2">MySQL Show/List Tables</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>DESCRIBE means to show the information in detail. Since we have tables in MySQL, so we will use the DESCRIBE command to show the structure of our table, such as column names, constraints on column names, etc. The DESC command is a short form of the DESCRIBE command.</p>
+    <br>
+    <p>
+
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <h2 id="h2">MySQL Show/List Databases</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>When we work with the MySQL server, it is a common task to show or list the databases, displaying the table from a particular database, and information of user accounts and their privileges that reside on the server. In this article, we are going to focus on how to list databases in the MySQL server.</p>
+    <br>
+    <p></p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <div class="syntax">USE database_name;  
+        
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> SHOW DATABASES;     
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-show-database.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+    
+            <br><br>
+    
+            <h2 id="h2">MySQL DROP Database</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>Dropping a database deletes the database from an instance of SQL Server and deletes the physical disk files used by the database. If the database or any one of its files is offline when it is dropped, the disk files are not deleted.</p>
+    <br>
+    <p>MySQL allows us to drop/delete/remove a database mainly in two ways:
+        <p>1. MySQL Command Line Client</p>
+        <p>2. MySQL Workbench</p><br>
+        <br>
+        <div class="syntax">DROP DATABASE [IF EXISTS] database_name;
+        <br>
+        <br>
+        </div>
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <!-- <div class="syntax">USE database_name;  
+        
+        <br>  </div> -->
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            DROP DATABASE mytestdb_copy;     
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysqldropdatabase2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+
+
+    
+    
+            <br><br>
+            <h2 id="h2">MySQL COPY Database</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>MySQL copy database is a process of creating an exact duplicate of a MySQL database. This can be done for a variety of reasons, including creating a backup or transferring data to another server.2</p>
+    <br>
+    <p>We need to follow these steps to copy a database to another database:
+        <p>1. First, use the CREATE DATABASE statement to create a new database.</p>
+        <p>2. Second, store the data to an SQL file. We can give any name to this file, but it must end with a .sql extension.</p><br>
+        <p>Third, export all the database objects along with its data to copy using the mysqldump tool and then import this file into the new database.</p>
+        
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <!-- <div class="syntax">USE database_name;  
+        
+        <br>  </div> -->
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysqldump -u root -p testdb > D:\Database_backup\testdb.sql       
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-copy-database2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        <div class="command">
+            mysql> SHOW TABLES;        
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-copy-database3.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+
+
+    
+    
+            <br><br>
+    
+</section>

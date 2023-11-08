@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Java Programs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/prism.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: #0077b6;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 30px;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .java-practical {
+      padding: 30px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism-okaidia.css">
+
+  <!-- <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PlSQL</title>
+		<link rel="stylesheet" href="D:\Coding VS-Code\7041_INDERPREET_SINGH_BCA_4_SEM\DBMS\adddeletecolumn.css"> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      Prism.highlightAll();
+    });
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1>Java Practicals</h1>
+  </header>
+  <main>
+    <div class="java-practical">
+      <h2>Practice program 41 - Java program to calculate average marks</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            // java program to find average of marks..
+            import java.util.Scanner;
+            class AverageMarks
+            {
+               public static void main(String args[])
+               {
+                   // Declaring avriables..
+                    int mark[] = new int[5],i;
+                    float sum=0,avg; 
+                   // Taking values from user...
+                    Scanner scan = new Scanner(System.in);
+                    System.out.print("Enter marks for 5 Subjects : ");
+                    for(i=0; i<5; i++)
+                    {
+                        mark[i] = scan.nextInt();
+                    // calculating sum
+                        sum = sum + mark[i];
+                    }
+                    // Finding avergae..
+                     avg= sum/5;
+             
+                    /// Printing the result...
+                System.out.print("Average Marks = " +avg);
+                }
+            }
+                    </code></pre>
+        </div>
+
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="../images/programs/9.png" alt="">
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

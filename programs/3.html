@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Java Programs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/prism.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: #0077b6;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 30px;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .java-practical {
+      padding: 30px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism-okaidia.css">
+
+  <!-- <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PlSQL</title>
+		<link rel="stylesheet" href="D:\Coding VS-Code\7041_INDERPREET_SINGH_BCA_4_SEM\DBMS\adddeletecolumn.css"> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      Prism.highlightAll();
+    });
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1>Java Practicals</h1>
+  </header>
+  <main>
+    <div class="java-practical">
+      <h2>Inheritance program 25 - Write a Java program to create an abstract class Bird with abstract methods fly() and makeSound(). Create subclasses Eagle and Hawk that extend the Bird class and implement the respective methods to describe how each bird flies and makes a sound.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            //Bird.java
+            abstract class Bird {
+              public abstract void fly();
+            
+              public abstract void makeSound();
+            }
+            //Eagle.java
+            class Eagle extends Bird {
+              @Override
+              public void fly() {
+                System.out.println("Eagle: Flying high in the sky.");
+              }
+            
+              @Override
+              public void makeSound() {
+                System.out.println("Eagle: Screech! Screech!");
+              }
+            }
+            //Hawk.java
+            class Hawk extends Bird {
+              @Override
+              public void fly() {
+                System.out.println("Hawk: Soaring through the air.");
+              }
+            
+              @Override
+              public void makeSound() {
+                System.out.println("Hawk: Caw! Caw!");
+              }
+            }
+            //Main.java
+            public class Inheritance_25 {
+              public static void main(String[] args) {
+                Bird eagle = new Eagle();
+                Bird hawk = new Hawk();
+            
+                eagle.fly();
+                eagle.makeSound();
+            
+                hawk.fly();
+                hawk.makeSound();
+              }
+            }
+                    </code></pre>
+        </div>
+
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="../images/programs/3.png" alt="">
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

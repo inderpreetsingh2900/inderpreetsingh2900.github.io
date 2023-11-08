@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DBMS | MySQL Clauses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\adddeletecolumn.css">
+    </head>
+<body>
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+        <br>
+        <!-- heading------------------------------------ -->
+        <h2 id="h2">MySQL WHERE Clause</h2>
+        <br>
+        <!-- about-------------------------------------- -->
+        <p>MySQL WHERE Clause is used with SELECT, INSERT, UPDATE and DELETE clause to filter the results. It specifies a specific position where you have to do the operation.</p>
+        <br>
+        <p>
+
+        </p>    
+       
+        <br>
+        
+        <!-- Syntax-------------------------------- -->
+        <h2>Syntax</h2>
+        <br>
+        <div class="syntax">
+            WHERE conditions;       
+            <br>  </div>
+
+            <br>
+            <h2>Example</h2>
+            <br>
+            <!-- command------------------------------ -->
+            <div class="command">
+                SELECT *  
+                FROM officers  
+                WHERE address = 'Mau';           
+                <br>
+            </div>
+            <!-- OUtput-------------------------------- -->
+            <br>
+            <img class="output" src="images\where-clause2.png" alt="">
+            <br>
+            <br>
+            <!-- next command------------------------------ -->
+            
+        
+                <br><br>
+        </section>             
+    </section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL Distinct Clause</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>MySQL DISTINCT clause is used to remove duplicate records from the table and fetch only the unique records. The DISTINCT clause is only used with the SELECT statement.</p>
+    <br>
+    <p>
+
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        SELECT DISTINCT expressions  
+        FROM tables  
+        [WHERE conditions];        
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            SELECT DISTINCT address  
+            FROM officers;             
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\distinct-clause2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL order by Clause</h2>
+    <br>
+    <h1>Order By Clause -:</h1><br><br><p> The Order By Keyword Is Used To Sort The Result-Set In 
+Ascending Or Descending Order.
+ The Order By Keyword Sorts The Records In Ascending Order By Default. To 
+Sort The Records In Descending Order, Use The Desc Keyword.</p>
+<h3>Syntax:-</h3><br><br>
+<p>SELECT column1, column2, ... FROM table_name ORDER BY column1, column2, ... 
+ASC|DESC;</p>
+<h3>Example :-</h3>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\orderby.png" alt="">
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\orderby2.png" alt="">
+<br><br><br>
+
+</section></section>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL group by Clause</h2>
+    <br>
+   <br><p>The GROUP BY statement groups rows that have 
+the same values into summary rows, like "find the number of customers in each 
+country".
+The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), 
+MIN(), SUM(), AVG()) to group the result-set by one or more columns.</p><br><br>
+<h3>Syntax-:</h3>
+SELECT column_name(s) FROM table_name WHERE condition GROUP BY 
+column_name(s) ORDER BY column_name(s);
+<h3>Example -:</h3><br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\groupby.png" alt="">
+<br><br><br>
+
+</section></section>
+<section class="2nd-section" id="right-sec" >
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL having clause</h2>
+    <br>
+    <h1>HAVING Clause -: </h1><br><br><p> HAVING clause was added to SQL because the 
+WHERE keyword cannot be used with aggregate functions.</p>
+<h3>Syntax-:</h3><br><br>
+<p>SELECT column_name(s) FROM table_name WHERE condition GROUP BY 
+column_name(s) HAVING condition ORDER BY column_name(s);</p>
+<h3>Example -:</h3><br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\having.png" alt="">
+<br><br><br>
+
+</section>
+
+ </section>
+</body>
+</html>

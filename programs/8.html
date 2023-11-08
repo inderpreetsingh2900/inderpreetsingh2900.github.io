@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Java Programs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/prism.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: #0077b6;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 30px;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .java-practical {
+      padding: 30px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism-okaidia.css">
+
+  <!-- <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PlSQL</title>
+		<link rel="stylesheet" href="D:\Coding VS-Code\7041_INDERPREET_SINGH_BCA_4_SEM\DBMS\adddeletecolumn.css"> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      Prism.highlightAll();
+    });
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1>Java Practicals</h1>
+  </header>
+  <main>
+    <div class="java-practical">
+      <h2>Packages 8 - Create a Java program to create a package with public class and protected members to be accessed in another class.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            MyPackage/MyClass.java
+package MyPackage;
+
+public class MyClass {
+    protected int protectedField;
+
+    protected void protectedMethod() {
+        System.out.println("Protected method in MyClass");
+    }
+}
+ MyPackage/MyExtendedClass.java
+package MyPackage;
+
+public class MyExtendedClass extends MyClass {
+    public void accessProtectedMembers() {
+        protectedField = 42;  // Access the protected field
+        protectedMethod();   // Access the protected method
+        System.out.println("Value of protectedField: " + protectedField);
+    }
+}
+ MainApp.java
+package MyPackage;
+
+public class Packages_8 {
+    public static void main(String[] args) {
+        MyExtendedClass extendedObj = new MyExtendedClass();
+        extendedObj.accessProtectedMembers();
+    }
+}
+                    </code></pre>
+        </div>
+
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="" alt="">
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

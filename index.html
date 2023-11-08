@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS | Introduction</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="globals.css">
+</head>
+
+<body>
+    <header>
+        <h1>PRACTICE PROGRAMS</h1>
+    </header>
+    <nav>
+        <a href="#">Theory of SQL</a>
+        <a href=".\MySQL_database.html" target="_self">MySQL
+            Database</a>
+        <a href=".\table_and_views.html">Table And Views</a>
+        <a href=".\my_sql_queries.html">MySQL Query</a>
+        <a href=".\mysql_clauses.html">MySQL Clauses</a>
+        <a href=".\key.html">MySQL Keys</a>
+        <a href=".\pl.html">Pl SQL</a>
+        <a href=".\java.html">Java</a>
+
+
+
+    </nav>
+    <main>
+        <section>
+            <h2>My sql Tutorials</h2>
+
+
+
+            <p>MySQL tutorial provides basic and advanced concepts of MySQL. Our MySQL tutorial is designed for
+                beginners and professionals. MySQL is a relational database management system based on the Structured
+                Query Language, which is the popular language for accessing and managing the records in the database.
+                MySQL is open-source and free software under the GNU license.</p>
+            <img src="https://static.javatpoint.com/mysql/images/mysql-tutorial.png" style="margin: 0 50% 0 50%;"
+                alt="MySQL" />
+            <p>Our MySQL tutorial includes all topics of MySQL database that provides for how to manage database and to
+                manipulate data with the help of various SQL queries. These queries are: insert records, update records,
+                delete records, select records, create tables, drop tables, etc. There are also given MySQL interview
+                questions to help you better understand the MySQL database.</p>
+            <h2 class="heading">What is Database?</h2>
+            <p>It is very important to understand the database before learning MySQL. A database is an application that
+                stores the organized collection of records. It can be accessed and manage by the user very easily. It
+                allows us to organize data into tables, rows, columns, and indexes to find the relevant information very
+                quickly. Each database contains distinct API for performing database operations such as creating,
+                managing, accessing, and searching the data it stores. Today, many databases available like MySQL,
+                Sybase, Oracle, MongoDB, PostgreSQL, SQL Server, etc. In this section, we are going to focus on MySQL
+                mainly.</p>
+            <h2 class="heading">What is MySQL?</h2><br>
+            <li>It allows us to implement database operations on tables, rows, columns, and indexes.</li>
+            <h2 class="heading">How MySQL Works?</h2>
+            <p>MySQL follows the working of Client-Server Architecture. This model is designed for the end-users called
+                clients to access the resources from a central computer known as a server using network services. Here,
+                the clients make requests through a graphical user interface (GUI), and the server will give the desired
+                output as soon as the instructions are matched. The process of MySQL environment is the same as the
+                client-server model.</p>
+            <br>
+            <img src="https://static.javatpoint.com/mysql/images/mysql-tutorial2.png" style="margin: 0 25% 0 25%;"
+                alt="MySQL" />
+            <br>
+            <br>
+            <p>The core of the MySQL database is the MySQL Server. This server is available as a separate program and
+                responsible for handling all the database instructions, statements, or commands. The working of MySQL
+                database with MySQL Server are as follows:</p>
+            <ol class="points">
+                <li>MySQL creates a database that allows you to build many tables to store and manipulate data and
+                    defining the relationship between each table.</li>
+                <br><br>
+                <h1 style="margin-left: 3.5%; font-size: 22px;">MySQL Data Types</h1>
+                <br><br><br>
+                <p>A Data Type specifies a particular type of data, like integer, floating points, Boolean, etc. It also
+                    identifies the possible values for that type, the operations that can be performed on that type, and
+                    the way the values of that type are stored. In MySQL, each database table has many columns and
+                    contains specific data types for each column.</p>
+                <p>We can determine the data type in MySQL with the following characteristics:</p>
+                <br>
+                <p class="dt"><b>Data Types</b> <br>
+                    TINYINT<br>
+                    SMALLINT<br>
+                    MEDIUMINT<br>
+                    INT<br>
+                    BIGINT<br>
+                    FLOAT(m,d)<br>
+                    DOUBLE(m,d)<br>
+                    DECIMAL(m,d)<br>
+                    BIT(m)<br>
+                    BOOL<br>
+                    BOOLEAN<br>
+                </p>
+                <br>
+                <p><b>String Data Types:</b></p>
+                <br>
+                <p>The string data type is used to hold plain text and binary data, for example, files, images, etc.
+                    MySQL can perform searching and comparison of string value based on the pattern matching such as
+                    LIKE operator, Regular Expressions, etc.</p>
+                <p>The following table illustrates all string data types that support in MySQL:</p>
+                <br>
+                <center>
+                    <table class="alt">
+                        <tr>
+                            <th>Data Type Syntax</th>
+                            <th>Maximum Size</th>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td>CHAR(size)</td>
+                            <td>It can have a maximum size of 255 characters.</td>
+                        </tr>
+                        <tr>
+                            <td>VARCHAR(size)</td>
+                            <td>It can have a maximum size of 255 characters.</td>
+                        </tr>
+                        <tr>
+                            <td>TINYTEXT(size)</td>
+                            <td>It can have a maximum size of 255 characters.</td>
+                        </tr>
+                        <tr>
+                            <td>TEXT(size)</td>
+                            <td>Maximum size of 65,535 characters.</td>
+                        </tr>
+                        <tr>
+                            <td>MEDIUMTEXT(size)</td>
+                            <td>It can have a maximum size of 16,777,215 characters.</td>
+                        </tr>
+                        <tr>
+                            <td>LONGTEXT(size)</td>
+                            <td>It can have a maximum size of 4GB or 4,294,967,295 characters.</td>
+                        </tr>
+                    </table>
+                </center>
+                <br><br>
+                <h1 class="h1">MySQL Variables</h1>
+                <br>
+                <br>
+                <br>
+                <p>Variables are used for storing data or information during the execution of a program. It is a way of
+                    labeling data with an appropriate name that helps to understand the program more clearly by the
+                    reader. The main purpose of the variable is to store data in memory and can be used throughout the
+                    program.</p>
+                <br>
+                <p>MySQL can use variables in <strong>three</strong> different ways, which are given below:</p>
+                <ol class="points">
+                    <li> User-Defined Variable</li>
+                    <li>Local Variable</li>
+                    <li>System Variable</li>
+                </ol>
+                <br>
+                <h2 class="h3">&nbsp;&nbsp;&nbsp;&nbsp; User-Defined Variable</h2>
+                <p>Sometimes, we want to pass values from one statement to another statement. The user-defined variable
+                    enables us to store a value in one statement and later can refer it to another statement.MySQL
+                    provides a <strong>SET</strong> and <strong>SELECT</strong> statement to declare and initialize a
+                    variable. The user-defined variable name starts with <strong>@ symbol</strong>.</p>
+                <p>The user-defined variables are not case-sensitive such as @name and @NAME; both are the same. A
+                    user-defined variable declares by one person cannot visible to another person. We can assign the
+                    user-defined variable into limited data types like integer, float, decimal, string, or NULL. The
+                    user-defined variable can be a maximum of <strong>64 characters</strong> in length.</p>
+
+                <br>
+                <h3 class="h4">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Syntax</h3>
+                <p>The following syntax is used to declare a user-defined variable.</p>
+                <p>1. By using the <strong>SET</strong> statement</p>
+                <div class="codeblock"><textarea name="code" class="sql">
+            SET @var_name = value;
+            </textarea></div>
+                <h4 class="n">NOTE: We can use either '=' or ':=' assignment operator with the SET statement.</h4>
+                <p>2. By using the <strong>SELECT</strong> statement</p>
+                <div class="codeblock"><textarea name="code" class="sql">
+            SELECT @var_name := value;
+            </textarea></div>
+                <h3 class="h4">Example1</h3>
+                <p>Here, we are going to assign a value to a variable by using the SET statement.</p>
+                <div class="codeblock"><textarea name="code" class="sql">
+            mysql&gt; SET @name='peter';
+            </textarea></div>
+                <p>Then, we can display the above value by using the SELECT statement.</p>
+                <div class="codeblock"><textarea name="code" class="sql">
+            mysql&gt; SELECT @name;
+            </textarea></div>
+                <p><strong>Output</strong></p>
+                <p><img src="https://static.javatpoint.com/mysql/images/mysql-variables.png" alt="MySQL Variables" />
+                </p>
+
+                <br><br>
+                <br><br><br>
+        </section>
+        </section>
+        </div>
+
+        </section>
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <a href="#">Instagram</a>
+        <a href="#">facebook</a>
+        <a href="#">telegram</a>
+        <a href="#">Contact Us</a>
+
+
+
+    </footer>
+
+</body>
+
+</html>

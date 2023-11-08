@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS |Table And Views</title>
+    <link rel="stylesheet" href="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\adddeletecolumn.css">
+</head>
+<body>
+<section>
+    <h2>Table & views</h2>
+    <h2 id="h2">MySQL CREATE TABLE</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>A table is used to organize data in the form of rows and columns and used for both storing and displaying records in the structure format. It is similar to worksheets in the spreadsheet application. A table creation command requires three things:</p>
+    <br>
+    <p>
+        <p>1. Name of the table</p>
+        <p>2. Names of fields</p>
+        <p>3. Definitions for each field</p>
+        
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        mysql> CREATE TABLE employee_table(  <br>
+             id int NOT NULL AUTO_INCREMENT,  <br>
+             name varchar(45) NOT NULL,  <br>
+             occupation varchar(35) NOT NULL,  <br>
+             age int NOT NULL,  <br>
+             PRIMARY KEY (id)  <br>
+            );  
+        <br>  </div>
+
+        <br>
+        <!-- <h2>Example</h2> -->
+        <br>
+        <!-- command------------------------------ -->
+        <!-- <div class="command">
+            mysqldump -u root -p testdb > D:\Database_backup\testdb.sql       
+            <br>
+        </div> -->
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-create-table.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        <h2>Command</h2>
+        <br>
+        <div class="command">
+            mysql> DESCRIBE employee_table;          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-create-table3.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+
+
+    
+    
+            <br><br>
+            <h2 id="h2">MySQL ALTER Table</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>The ALTER TABLE statement is used to add, delete, or modify columns in an existing table. The ALTER TABLE statement is also used to add and drop various constraints on an existing table.</p>
+    <br>
+    <p>
+        <p>The ALTER statement is always used with "ADD", "DROP" and "MODIFY" commands according to the situation.</p>
+        
+        
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2> 1) ADD a column in the table</h2><br>
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        ALTER TABLE table_name  
+        ADD new_column_name column_definition  
+        [ FIRST | AFTER column_name ];  
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            ALTER TABLE cus_tbl <br>
+ADD             cus_age varchar(40) NOT NULL;        
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table1.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        <br>
+        <h2>See the recently added columns:</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            SELECT* FROM cus_tbl;         
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table2.png" alt="">
+        <br>
+        <br>
+        <!-- next 2 -------------------------------- -->
+
+        <h2> 2) Add multiple columns in the table</h2><br>
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        ALTER TABLE table_name  <br>
+        ADD new_column_name column_definition  <br>
+         [ FIRST | AFTER column_name ],  <br>
+        ADD new_column_name column_definition  <br>
+        [ FIRST | AFTER column_name ],  
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            ALTER TABLE cus_tbl  <br>
+            ADD cus_address varchar(100) NOT NULL  <br>
+            AFTER cus_surname,  <br>
+            ADD cus_salary int(100) NOT NULL <br> 
+            AFTER cus_age ;          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table3.png" alt="">
+        <br>
+        <br>
+        <br>
+        <h2>See the recently added columns:</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            SELECT* FROM cus_tbl;           
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table4.png" alt="">
+        <br>
+        <br>
+        <!-- next 3 -------------------------------- -->
+        <h2>3). MODIFY column in the table</h2><br>
+    <h2>Syntax</h2>
+    <p>The MODIFY command is used to change the column definition of the table.</p>
+    <br>
+    <div class="syntax">
+        ALTER TABLE table_name  <br>
+        MODIFY column_name column_definition <br> 
+        [ FIRST | AFTER column_name ];   
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            ALTER TABLE cus_tbl  <br>
+            MODIFY cus_surname varchar(50) NULL;            
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table5.png" alt="">
+        <br>
+        <br>
+        <br>
+        <h2>See the Structure:</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <!-- <div class="command">
+            SELECT* FROM cus_tbl;           
+            <br>
+        </div> -->
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table6.png" alt="">
+        <br>
+        <br>
+        <!-- next 4 -------------------------------- -->
+        <h2>4) DROP column in table</h2><br>
+    
+    <p>The DROP COLUMN command is used to delete a column in an existing table.</p>
+    <br><h2>Syntax</h2>
+    <div class="syntax">
+        ALTER TABLE table_name  <br>
+        DROP COLUMN column_name;  
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            ALTER TABLE cus_tbl  <br>
+            DROP COLUMN cus_address;             
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table7.png" alt="">
+        <br>
+        <br>
+        <br>
+        <h2>See the Structure:</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <!-- <div class="command">
+            SELECT* FROM cus_tbl;           
+            <br>
+        </div> -->
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table8.png" alt="">
+        <br>
+        <br>
+        <!-- next 5 -------------------------------- -->
+       
+        <h2>5) RENAME column in table</h2><br>
+    
+    <p>The RENAME COLUMN and CHANGE statements both allow for the names of existing columns to be altered. The difference is that the CHANGE clause can also be used to alter the data types of a column.</p>
+    <br><h2>Syntax</h2>
+    <div class="syntax">
+        ALTER TABLE table_name  <br>
+        CHANGE COLUMN old_name new_name  <br> 
+        column_definition  <br>
+        [ FIRST | AFTER column_name ]    
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            ALTER TABLE  cus_tbl <br> 
+            CHANGE COLUMN cus_surname cus_title  <br>
+            varchar(20) NOT NULL;              
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="\images\alter-table9.png" alt="">
+        <br>
+        <br>
+        <!-- next 6 -------------------------------- -->
+
+
+       
+        <h2>6) RENAME table</h2><br>
+    
+    <p>In some situations, database administrators and users want to change the name of the table in the SQL database because they want to give a more relevant name to the table. Any database user can easily change the name by using the RENAME TABLE and ALTER TABLE statement in Structured Query Language.</p>
+    <br><h2>Syntax</h2>
+    <div class="syntax">
+        ALTER TABLE table_name  <br>
+        RENAME TO new_table_name;    
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            ALTER TABLE cus_tbl  <br>
+            RENAME TO cus_table;               
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table11.png" alt="">
+        <br>
+        <br>
+        <br>
+        <h2>See the Structure:</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <!-- <div class="command">
+            SELECT* FROM cus_tbl;           
+            <br>
+        </div> -->
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table12.png" alt="">
+        <br>
+        <br>
+        <!-- next 6 -------------------------------- -->
+    
+    
+    
+            <br><br>
+            <h2 id="h2">MySQL Show/List Tables</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>DESCRIBE means to show the information in detail. Since we have tables in MySQL, so we will use the DESCRIBE command to show the structure of our table, such as column names, constraints on column names, etc. The DESC command is a short form of the DESCRIBE command.</p>
+    <br>
+    <p>
+
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        mysql> SHOW TABLE tablename;    
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> SHOW TABLES; <br>
+            OR <br>
+            mysql> SHOW TABLES FROM mystudentdb;  <br>
+            OR,  <br>
+            mysql> SHOW TABLES IN mystudentdb;         
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\alter-table1.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+            <br><br>
+</section>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL Rename Table</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>Sometimes our table name is non-meaningful, so it is required to rename or change the name of the table. MySQL provides a useful syntax that can rename one or more tables in the current database.</p>
+    <br>
+    <p>
+
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        mysql> RENAME old_table TO new_table;      
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> RENAME employee TO customer;          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-rename-table2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+            <br><br>
+    </section>             
+</section>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL TRUNCATE Table</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>The TRUNCATE statement in MySQL removes the complete data without removing its structure. It is a part of DDL or data definition language command. Generally, we use this command when we want to delete an entire data from a table without removing the table structure.</p>
+    <br>
+    <p>
+        The TRUNCATE command works the same as a DELETE command without using a WHERE clause that deletes complete rows from a table. However, the TRUNCATE command is more efficient as compared to the DELETE command because it removes and recreates the table instead of deleting single records one at a time. Since this command internally drops the table and recreates it, the number of rows affected by the truncate statement is zero, unlike the delete statement that returns the number of deleted rows.
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        TRUNCATE [TABLE] table_name;       
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> TRUNCATE TABLE customer;           
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-truncate-table2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL DESCRIBE TABLE</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>DESCRIBE means to show the information in detail. Since we have tables in MySQL, so we will use the DESCRIBE command to show the structure of our table, such as column names, constraints on column names, etc. The DESC command is a short form of the DESCRIBE command. Both DESCRIBE and DESC command are equivalent and case sensitive.</p>
+    <br>
+    <p>
+        
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        {DESCRIBE | DESC} table_name;       
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> DESCRIBE customer;            
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-describe-table4.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL DROP Table</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>The DROP TABLE statement allows a table to be removed from a MySQL database. This statement deletes the entire structure as well as the content of the table.</p>
+    <br>
+    <p>
+        
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        mysql> DROP TABLE  table_name; <br> 
+        OR,  <br> 
+        mysql> DROP TABLE  schema_name.table_name;       
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> DROP TABLE  orders;              
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-drop-table2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL Temporary Table</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>A TEMPORARY table is visible only within the current session, and is dropped automatically when the session is closed. This means that two different sessions can use the same temporary table name without conflicting with each other or with an existing non- TEMPORARY table of the same name.</p>
+    <br>
+    <p>
+        
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        mysql> CREATE TEMPORARY TABLE table_name <br>
+        
+         
+            
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> CREATE TEMPORARY TABLE Students;
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <!-- <br>
+        <img class="output" src="images\mysql-drop-table2.png" alt="">
+        <br>
+        <br> -->
+        <!-- next command------------------------------ -->
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL Copy/Clone/Duplicate Table</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>MySQL copy or clone table is a feature that allows us to create a duplicate table of an existing table, including the table structure, indexes, constraints, default values, etc. Copying data of an existing table into a new table is very useful in a situation like backing up data in table failure.</p>
+    <br>
+    <p>
+        
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        CREATE TABLE new_table_name  <br>
+        SELECT column1, column2, column3   <br>
+        FROM existing_table_name  <br>
+        WHERE condition;  
+        
+         
+            
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            CREATE TABLE IF NOT EXISTS duplicate_table   <br>
+            SELECT * FROM original_table;  
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-copy-table2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL Add/Delete Column</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>A column is a series of cells in a table that may contain text, numbers, and images. Every column stores one value for each row in a table. In this section, we are going to discuss how to add or delete columns in an existing table.</p>
+    <br>
+    <p>
+        <h3>How can we add a column in MySQL table?</h3>
+        <p>MySQL allows the ALTER TABLE ADD COLUMN command to add a new column to an existing table. The following are the syntax to do this:</p>
+        
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        ALTER TABLE table_name   <br>
+        ADD COLUMN column_name column_definition [FIRST|AFTER existing_column];  
+        
+         
+            
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            ALTER TABLE Test  <br> 
+            ADD COLUMN Phone_number VARCHAR(20) NOT NULL AFTER Name;  
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-add-delete-column2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+
+        
+        <p>Let us add some data into the Test table using the INSERT statement as follows:</p><br>
+        <div class="command">
+            INSERT INTO Test( Name, Phone_number, City)   <br>
+            VALUES ('Peter', '34556745362', 'California'),  <br>
+            ('Mike', '983635674562', 'Texas'); 
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-add-delete-column3.png" alt="">
+        <br>
+        <br>
+
+
+        <!-- next 2---------------------------------------- -->
+        <p>
+            <h3>How can we drop a column from MySQL table?</h3>
+            <p>Sometimes, we want to remove single or multiple columns from the table. MySQL allows the ALTER TABLE DROP COLUMN statement to delete the column from the table. The following are the syntax to do this:</p>
+            
+        </p>    
+       
+        <br>
+        
+        <!-- Syntax-------------------------------- -->
+        <h2>Syntax</h2>
+        <br>
+        <div class="syntax">
+            ALTER TABLE table_name  DROP COLUMN column_name;   
+            
+             
+                
+            <br>  </div>
+
+            <br>
+            <h2>Example</h2>
+            <br>
+            <!-- command------------------------------ -->
+            <div class="command">
+                ALTER TABLE Test DROP COLUMN Branch;  
+              
+                <br>
+            </div>
+            <!-- OUtput-------------------------------- -->
+            <br>
+            <img class="output" src="images\mysql-add-delete-column8.png" alt="">
+            <br>
+            <br>
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL Show Columns</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>SHOW COLUMNS statement in MySQL is a more flexible way to display the column information in a given table. It can also support views. Using this statement, we will get only that column information for which we have some privilege.</p>
+    <br>
+    <p>
+       
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        SHOW [EXTENDED] [FULL] {COLUMNS | FIELDS} <br> 
+        {FROM | IN} table_name  <br> 
+         [{FROM | IN} db_name]  <br> 
+         [LIKE 'pattern' | WHERE expr]   
+        
+         
+            
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> SHOW COLUMNS FROM student_info;   
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-show-columns2.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL Rename Column</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>Sometimes our column name is non-meaningful, so it is required to rename or change the column's name. MySQL provides a useful syntax that can rename one or more columns in the table. Few privileges are essential before renaming the column, such as ALTER and DROP statement privileges.</p>
+    <br>
+    <p>
+        <h3>MySQL can rename the column name in two ways:</h3><br>
+        <p>1. Using the CHANGE statement</p>
+        <p>2. Using the RENAME statement</p>
+       
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Using the CHANGE Statement:</h2>
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        ALTER TABLE table_name  <br> 
+        CHANGE COLUMN old_column_name new_column_name Data Type;
+        
+
+         
+            
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> ALTER TABLE balance   <br>
+            CHANGE COLUMN account_num account_no VARCHAR(25);     
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-rename-column3.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        <h2>Using the RENAME Statement:</h2>
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        ALTER TABLE table_name   <br>
+        RENAME COLUMN old_column_name TO new_column_name;  
+        
+
+         
+            
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            mysql> ALTER TABLE customer RENAME COLUMN account to account_no;     
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysql-rename-column5.png" alt="">
+        <br>
+        <br>
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+<section class="2nd-section" id="right-sec">
+    <section id="content">
+    <br>
+    <!-- heading------------------------------------ -->
+    <h2 id="h2">MySQL Rename Column</h2>
+    <br>
+    <!-- about-------------------------------------- -->
+    <p>In SQL, a view is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.</p>
+    <br>
+    <p>
+        
+       
+    </p>    
+   
+    <br>
+    
+    <!-- Syntax-------------------------------- -->
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        CREATE [OR REPLACE] VIEW view_name AS   <br> 
+        SELECT columns    <br> 
+        FROM tables    <br> 
+        [WHERE conditions];    
+        
+        </div>
+        <br>
+        <div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            CREATE VIEW trainer AS   <br> 
+            SELECT course_name, trainer <br>     
+             FROM courses;       
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysqlview1.png" alt="">
+        <br>
+        <br>
+        <!-- next command------------------------------ -->
+        <h2>To see created view:</h2>
+    <h2>Syntax</h2>
+    <br>
+    <div class="syntax">
+        SELECT * FROM view_name;     
+         
+        <br>  </div>
+
+        <br>
+        <h2>Example</h2>
+        <br>
+        <!-- command------------------------------ -->
+        <div class="command">
+            SELECT * FROM trainer;        
+          
+            <br>
+        </div>
+        <!-- OUtput-------------------------------- -->
+        <br>
+        <img class="output" src="images\mysqlview2.png" alt="">
+        <br>
+        <br>
+        
+    
+            <br><br>
+    </section>             
+</section>
+</div>
+</body>
+</html>

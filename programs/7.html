@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Java Programs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/prism.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: #0077b6;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 30px;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .java-practical {
+      padding: 30px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism-okaidia.css">
+
+  <!-- <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PlSQL</title>
+		<link rel="stylesheet" href="D:\Coding VS-Code\7041_INDERPREET_SINGH_BCA_4_SEM\DBMS\adddeletecolumn.css"> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      Prism.highlightAll();
+    });
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1>Java Practicals</h1>
+  </header>
+  <main>
+    <div class="java-practical">
+      <h2>Packages 6 - Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            MyPackage/Class1.java
+            package MyPackage;
+            
+            public class Class1 {
+                public void function1() {
+                    System.out.println("Function 1 from Class1");
+                }
+            }
+            
+             MyPackage/Class2.java
+            package MyPackage;
+            
+            public class Class2 {
+                public void function2() {
+                    System.out.println("Function 2 from Class2");
+                }
+            }
+            
+             MyPackage/Class3.java
+            package MyPackage;
+            
+            public class Class3 {
+                public void function3() {
+                    System.out.println("Function 3 from Class3");
+                }
+            }
+            
+            MyPackage/Class4.java
+            package MyPackage;
+            
+            public class Class4 {
+                public void function4() {
+                    System.out.println("Function 4 from Class4");
+                }
+            }
+            /MainApp.java
+            import MyPackage.Class1;
+            import MyPackage.Class2;
+            import MyPackage.Class3;
+            import MyPackage.Class4;
+            
+            public class Packages_6 {
+                public static void main(String[] args) {
+                    Class1 obj1 = new Class1();
+                    Class2 obj2 = new Class2();
+                    Class3 obj3 = new Class3();
+                    Class4 obj4 = new Class4();
+            
+                    obj1.function1();
+                    obj2.function2();
+                    obj3.function3();
+                    obj4.function4();
+                }
+            }
+                    </code></pre>
+        </div>
+
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="" alt="">
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

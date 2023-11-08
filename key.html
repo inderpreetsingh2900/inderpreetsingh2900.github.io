@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DBMS | MySQL Keys</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\adddeletecolumn.css">
+    </head>
+<body>
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+        <br>
+        <!-- heading------------------------------------ -->
+        <h2 id="h2">primary key</h2>
+
+        <h1>Primary Key On Create Table -:</h1><br><br><p>Creates a PRIMARY KEY on the "ID" 
+column when the "Persons" table is created:</p>
+<h3>Syntax-:</h3><br>
+<p>• CREATE TABLE Persons (ID int NOT NULL, LastName varchar(255) NOT 
+NULL, FirstName varchar(255),Age int,PRIMARY KEY (ID));<br>
+• CREATE TABLE Persons ( ID int NOT NULL PRIMARY KEY,LastName 
+varchar(255) NOT NULL,FirstName varchar(255),Age int);<br>
+• CREATE TABLE Persons (ID int NOT NULL,LastName varchar(255) NOT 
+NULL,FirstName varchar(255),Age int,CONSTRAINT PK_Persons PRIMARY 
+KEY (ID,LastName));</p><br><br><br>
+Example -:<br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\p1.png" alt=""><br><br>
+
+
+Multiple Columns Primary Key -:<br><br>
+Example -:<br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\p2.png" alt=""><br><br>
+
+
+✓ Primary Key On Alter Table -: <br><br>To create a PRIMARY KEY constraint on 
+the "ID" column when the table is already created<br><br>
+Syntax-:<br><br>
+• ALTER TABLE Persons ADD PRIMARY KEY (ID);<br><br>
+• ALTER TABLE Persons ADD CONSTRAINT PK_table PRIMARY KEY 
+(ID,LastName);<br><br>
+• ALTER TABLE Persons DROP PRIMARY KEY;<br><br>
+• ALTER TABLE Persons DROP CONSTRAINT PK_ Persons;<br><br>
+Example -:<br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\p3.png" alt=""><br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\p4.png" alt=""><br><br>
+
+
+Drop Primary Key Example -:<br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\p5.png" alt=""><br><br>
+
+        </section>
+        </section>
+
+
+ <section class="2nd-section" id="right-sec">
+            <section id="content">
+            <br>
+            <!-- heading------------------------------------ -->
+            <h2 id="h2">foriegn key</h2>
+
+        Foreign Key Constraint -: <p><h1></h1><br><br>The FOREIGN KEY constraint is used to prevent 
+actions that would destroy links between tables. <br><br>
+ A FOREIGN KEY is a field (or collection of fields) in one table, that refers to 
+the PRIMARY KEY in another table.<br>
+ The table with the foreign key is called the child table, and the table with the 
+primary key is called the referenced or parent table.<br><br>
+Syntax-:<br><br>
+• CREATE TABLE Orders (OrderID int NOT NULL,OrderNumber int NOT 
+NULL, PersonID int,PRIMARY KEY (OrderID),FOREIGN KEY (PersonID) 
+REFERENCES Persons(PersonID));<br><br>
+• CREATE TABLE Orders (OrderID int NOT NULL,OrderNumber int NOT 
+NULL, PersonID int,PRIMARY KEY (OrderID),CONSTRAINT FK_PersonOrder 
+FOREIGN KEY (PersonID)REFERENCES Persons(PersonID));<br><br>
+Example -:<br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\f1.png" alt="">
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\f2.png" alt="">
+
+
+<br><br>✓ Foreign Key On Alter Table -: To create a FOREIGN KEY constraint on the 
+"PersonID" column when the "Orders" table is already created
+Syntax-:<br><br>
+• ALTER TABLE Orders ADD FOREIGN KEY (PersonID) REFERENCES 
+Persons(PersonID);<br><br>
+• ALTER TABLE Orders ADD CONSTRAINT FK_PersonOrder FOREIGN KEY 
+(PersonID) REFERENCES Persons(PersonID);<br><br>
+Example -:<br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\f3.png" alt="">
+
+
+<br><br>✓ Drop A Foreign Key Constraint -:<br><br>
+Syntax-:<br><br>
+• ALTER TABLE Orders DROP FOREIGN KEY FK_PersonOrder;<br><br>
+• ALTER TABLE Orders DROP CONSTRAINT FK_PersonOrder;<br><br>
+Example -:<br><br>
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\f4.png" alt="">
+<img class="output" src="D:\Coding VS-Code\Html\7041_INDERPREET_SINGH_DBMS_FILE\images\f5.png" alt="">
+
+</h1></p>
+</section>
+</section>
+
+        </body>
+        </html>

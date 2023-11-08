@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Java Programs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/prism.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: #0077b6;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 30px;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .java-practical {
+      padding: 30px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism-okaidia.css">
+
+  <!-- <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PlSQL</title>
+		<link rel="stylesheet" href="D:\Coding VS-Code\7041_INDERPREET_SINGH_BCA_4_SEM\DBMS\adddeletecolumn.css"> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      Prism.highlightAll();
+    });
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1>Java Practicals</h1>
+  </header>
+  <main>
+    <div class="java-practical">
+      <h2>Practice program 63 - Write a Java program that reads an integer and checks whether it is negative, zero, or positive</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            class Check_number {
+                public static void main(String[] args) {
+                    java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
+            
+                    try {
+                        System.out.print("Enter a number: ");
+                        double number = Double.parseDouble(input.readLine());
+                        StringBuffer msg = new StringBuffer("zero");
+            
+                        if (number > 0) {
+                            msg.replace(0, msg.length(), "positive");
+                        } else if (number < 0) {
+                            msg.replace(0, msg.length(), "negative"); 
+                        }
+            
+                        System.out.println("The number is " + msg);
+                    } catch (java.util.InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid numeric value.");
+                    } catch (Exception e) {
+                        System.out.println("Something went wrong.");
+                    }
+                }
+            }
+                    </code></pre>
+        </div>
+
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="../images/programs/12.png" alt="">
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
