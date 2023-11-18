@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Java Programs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/prism.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: #0077b6;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 30px;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .java-practical {
+      padding: 30px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism-okaidia.css">
+</head>
+
+<body>
+  <header>
+    <h1>Java Practicals</h1>
+  </header>
+  <main>
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>2. Create an applet showing the string "Hello World" which is executed by an appletviewer.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.applet.Applet;
+            import java.awt.Color;
+            import java.awt.Graphics;
+            
+            // <applet code = Applet2.java width ="200" height = "200">
+            //  </applet>
+            
+            public class Applet2 extends Applet {
+               
+                public void paint(Graphics g){
+                    g.setColor(Color.red);
+                    g.drawString("hello world", 20, 20);
+                }
+                
+            }
+            
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/2.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>3. Create an applet in Java to draw a circle.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            /*
+            <applet code="a7039applets3.class" width=500 height=500>
+            </applet>
+            */
+            import java.awt.*;
+            import java.applet.*;
+            
+            public class a7039applets3 extends Applet {
+            
+              public void init()
+              {
+                // set size
+                setSize(300, 300);
+            
+                repaint();
+              }
+            
+              // paint the applet
+              public void paint(Graphics g)
+              {
+                // set Color for rectangle
+                g.setColor(Color.red);
+            
+                // draw a ellipse
+                // g.drawOval(100, 100, 150, 100);
+                      g.drawOval(50,50,150,100);
+            
+              }
+            }
+            
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/3.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>5. Create an applet in Java to draw a rectangle.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            class RectangleApplet extends java.applet.Applet {
+              public void paint(java.awt.Graphics g) {
+                  g.drawRect(50, 50, 200, 100);
+              }
+          }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/5.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>8. Create an applet in Java to draw a line.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.applet.Applet;  
+            import java.awt.*;  
+              
+            public class GraphicsDemo extends Applet{  
+              
+            public void paint(Graphics g)
+            {  
+            g.setColor(Color.red);  
+            g.drawLine(20,30,20,300);  }}
+            
+            /* <applet code="GraphicsDemo.class" width="300" height="300">  */
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/8.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>9. Create an applet in Java to draw a oval.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.applet.Applet;
+            import java.awt.Graphics;
+            
+            class Applet_9 extends Applet {
+                public void paint(Graphics g) {
+                    // Draw an oval with the specified coordinates and dimensions
+                    int x = 50;
+                    int y = 50;
+                    int width = 200;
+                    int height = 100;
+                    g.drawOval(x, y, width, height);
+                }
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/9.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>11. Create an applet in Java to change the background color.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.applet.Applet;
+            import java.awt.Color;
+            import java.awt.Graphics;
+            
+            class Applet7104prog11 extends Applet {
+                /*
+                 * Topic = Applet
+                 * prog.no 11 Java Program to change background color in applet.
+                 */
+                public Applet7104prog11() {
+                    setBackground(Color.red);
+                }
+            
+                public void paint(java.awt.Graphics g) {
+            
+                    g.drawString("Background Color Changed", 50, 50);
+                }
+                /*
+                 * <applet code="Applet7104prog11.class" width="300" height="300">
+                 * </applet>
+                 */
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/11.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>12. Create an applet in Java to draw rounded rectangle.</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.applet.Applet;
+            import java.awt.Graphics;
+            import java.awt.Graphics2D;
+            import java.awt.geom.RoundRectangle2D;
+            
+            class Applet_12 extends Applet {
+                public void paint(Graphics g) {
+                    // Cast Graphics to Graphics2D for more advanced shapes
+                    Graphics2D g2d = (Graphics2D) g;
+            
+                    // Draw a rounded rectangle with the specified coordinates and dimensions
+                    int x = 50;
+                    int y = 50;
+                    int width = 200;
+                    int height = 100;
+                    int arcWidth = 30; // The width of the arc
+                    int arcHeight = 30; // The height of the arc
+            
+                    RoundRectangle2D roundedRectangle = new RoundRectangle2D.Double(x, y, width, height, arcWidth, arcHeight);
+                    g2d.draw(roundedRectangle);
+                }
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/12.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+  </main>
+</body>
+
+</html>

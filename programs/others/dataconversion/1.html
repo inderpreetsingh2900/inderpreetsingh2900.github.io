@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Java Programs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/prism.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: #0077b6;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 30px;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .java-practical {
+      padding: 30px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism-okaidia.css">
+</head>
+
+<body>
+  <header>
+    <h1>Java Practicals</h1>
+  </header>
+  <main>
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>1. How to convert String to int</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+          
+// How to convert String to int
+public class StrToInt 
+{
+	public static void main(String[] args) 
+	{
+		String str = "123";
+		int i=Integer.parseInt(str);
+		System.out.println("String is : "+str);
+		System.out.println("Str Convert to a int: "+ i);
+		System.out.println(1+i);
+		
+	}
+
+}
+
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/1.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>3. How to convert String to long</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            public class StringToLongExample {
+              public static void main(String[] args) {
+                  // Sample String
+                  String numberString = "123456789";
+          
+                  try {
+                      // Convert String to long
+                      long number = Long.parseLong(numberString);
+          
+                      // Print the result
+                      System.out.println("Converted long value: " + number);
+                  } catch (NumberFormatException e) {
+                      System.err.println("Error: Unable to parse the string as a long.");
+                      e.printStackTrace();
+                  }
+              }
+          }
+          
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/3.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>4. How to convert long to String</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            public class DataConversion4 {
+
+              public static void main(String[] args) {
+                  long myLong = 123456L;
+              String str = Long.toString(myLong);
+              System.out.println(str);
+              
+              }     
+                     
+              
+              }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/4.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>5. How to convert String to float</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            class StringToFloatExample {
+              public static void main(String[] args) {
+                  // Example String containing a floating-point number
+                  String floatString = "3.14";
+          
+                  // Convert String to float using Float.parseFloat()
+                  try {
+                      float floatValue = Float.parseFloat(floatString);
+                      System.out.println("Converted float value: " + floatValue);
+                  } catch (NumberFormatException e) {
+                      System.out.println("Error: Invalid float format in the input string");
+                      e.printStackTrace();
+                  }
+              }
+          }
+          
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/5.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>6. How to convert float to String</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+          
+//How to convert float to String
+public class FloatToString 
+{
+	public static void main(String[] args) 
+	{
+		float f = 10.4f;
+		System.out.println(f + 2);
+		String stringValue = "" + f;
+		System.out.println(stringValue + 2);
+	}
+
+}
+
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/6.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>7. How to convert String to double</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            package BCA5Practical;
+            //How to convert String to double
+            public class StringToDouble 
+            {
+              public static void main(String[] args) 
+              {
+                String str = "0.5";
+                double D=Double.parseDouble(str);
+                System.out.println("String is "+str);
+                System.out.println("String Converted to an Double "+ D);
+                System.out.println("Showing the String was converted to Double above "+(1+D));
+              }
+            }
+            
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/7.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>8. How to convert double to String</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.util.Scanner;
+            class ja{
+            public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter a double number: "); 
+            double num = sc.nextDouble();
+            String str = Double.toString(num);
+            System.out.println("Converted String: " + str);   
+                }
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/8.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>9. How to convert String to Date</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.text.SimpleDateFormat;
+            import java.util.Date;
+            
+            public class convert {
+                public static void main(String[] args) {
+                    Date date = new Date();
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    String strDate = formatter.format(date);
+                    System.out.println("Date converted to string: " + strDate);
+                }
+            }
+            
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/9.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>10. How to convert Date to String</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.util.Date;
+            import java.text.SimpleDateFormat;
+            class DateToString{
+            public static void main(String a[])
+            {
+            Date date=new Date();
+            System.out.println(date);
+            SimpleDateFormat s=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String str=s.format(date);
+            System.out.println(str);
+            }
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/10.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>11. How to convert String to char</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            // Data conversion:- 11. How to convert string to Char.     By(7058/21)
+
+            import java.util.*;
+            
+            class STC{
+             public static void main(String args[]){
+               
+                String str="Aryan";
+              
+                char [] chr= new char[str.length()];
+                 
+                for(int i=0;i< str.length();i++){
+               
+               chr[i]=str.charAt(i);
+               
+            }
+            for (char c : chr){
+             System.out.println(c);
+            }
+            }
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/11.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>12. How to convert char to String</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            // Data conversion:- 12. How to convert Char to String.     By(7058/21)
+
+            import java.io.*;
+            import java.util.*;
+            
+            class CTS{
+             public static void main(String args[]){
+               
+                char d='A';
+              
+                String str=Character.toString(d);
+            System.out.println("Char is converted to string:- "+str);
+            }
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/12.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>13. How to convert String to Object</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            class prog13{
+              public static void main(String[] args) {
+                  // Convert String to Integer
+                  String intStr = "123";
+                  int intValue = Integer.parseInt(intStr);
+                  System.out.println("Converted Integer: " + intValue);
+          
+                  // Convert String to Double
+                  String doubleStr = "3.14";
+                  double doubleValue = Double.parseDouble(doubleStr);
+                  System.out.println("Converted Double: " + doubleValue);
+          
+                  // Convert String to Boolean
+                  String boolStr = "true";
+                  boolean boolValue = Boolean.parseBoolean(boolStr);
+                  System.out.println("Converted Boolean: " + boolValue);
+          
+                  // Convert String to Custom Object (using Constructor)
+                  String customStr = "Hello, World!";
+                  CustomObject customObject = new CustomObject(customStr);
+                  System.out.println("Converted Custom Object: " + customObject.getData());
+              }
+          
+              // Example Custom Object
+              static class CustomObject {
+                  private String data;
+          
+                  public CustomObject(String data) {
+                      this.data = data;
+                  }
+          
+                  public String getData() {
+                      return data;
+                  }
+              }
+          }
+          
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/13.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>14. How to convert Object to String</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            //Program no. : data conversion 14
+            //Program name : How to convert Object to String
+            
+            class dConversion{
+            
+                public static void main(String[] args) {
+                    Object obj = new Integer(100);
+                    String s = String.valueOf(obj);
+            
+                    System.out.println(s);
+            
+            
+                  
+                    if(s instanceof String){
+                        System.out.println("It is string type...");
+                    }
+            
+                }
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/14.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>17. How to convert int to double</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            class Conversion {
+              public static void main(String[] args) {
+                  int x = 10;              
+                  double y = x;  
+          
+                  System.out.println("Original int value: " + x);
+                  System.out.println("Converted double value: " + y);
+                  double square = y * y;
+                  System.out.println("Square of the converted double value: " + square);
+              }
+          }
+          
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/17.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>18. How to convert double to int</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+         
+import java.util.Scanner;
+
+class DoubleToInt
+{
+    public static void main(String args[])
+    {
+      System.out.println("\n How to Convert Double To Int.\n");
+      System.out.print(" Enter a double value one  : ");
+      Scanner sc=new Scanner(System.in);
+      double num1 = sc.nextDouble();
+      System.out.print(" Enter a double value Two : ");
+      double num2 = sc.nextDouble();
+
+      int value1 =(int)num1;
+      int value2=(int)num2;
+
+      System.out.println("\n Convert Double value To Integer value is  : "+value1);
+      System.out.println(" Convert Double value To Integer value is  : "+value2);
+    }
+}       </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/18.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>19. How to convert char to int</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+          
+//How to convert char to int
+
+
+
+
+class chartoint
+{
+
+        public static void main(String a[])
+        {
+
+
+             
+                 char myChar = 'A'; 
+                 int myInt = myChar;
+
+           System.out.println("Character value: "+ myChar);
+           System.out.println();
+           System.out.println("Value after convert to Int: "+ myInt);
+
+
+
+
+        }
+
+
+
+
+
+}
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/19.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>20. How to convert int to char</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+           
+// Using Concept of Type-casting 
+import java.util.*; 
+
+class A { 
+
+	public static void main(String[] args) 
+	{ 
+
+		
+		int i = 97; 
+
+		// Type casting character to integer 
+		char ch = (char)i; 
+
+		System.out.println(ch); 
+	} 
+}
+
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/20.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>21. How to convert String to boolean</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+        
+import java.util.Scanner;
+
+class convertStringToBoolean
+{
+    public static void main(String args[])
+    {
+        System.out.println("\n How to convert String To Boolean.");
+        Scanner sc= new Scanner(System.in);
+        System.out.println(" ");
+        System.out.print(" Enter the String1 = ");
+        String str1 = sc.nextLine();
+        System.out.print(" Enter the String2 = ");
+        String str2 = sc.nextLine();
+        System.out.print(" Enter the String3 = ");
+        String str3 = sc.nextLine();
+        
+        boolean b1 = Boolean.valueOf(str1); 
+        boolean b2 = Boolean.valueOf(str2);
+        boolean b3 = Boolean.valueOf(str3);
+
+        System.out.println("");
+        System.out.println(" The convert String To Boolean Value is : "+b1);
+        System.out.println(" The convert String To Boolean Value is : "+b2);
+        System.out.println(" The convert String To Boolean Value is : "+b3);
+        
+        
+    }
+}
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/21.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>22. How to convert boolean to String</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.util.Scanner;
+
+            class booleantostring {
+                public static void main(String[] a) {
+                    Scanner s = new Scanner(System.in);
+            
+                    System.out.print("Enter a boolean value (true or false): ");
+                    String booleanInput = s.nextLine();
+            
+                    boolean booleanValue = Boolean.parseBoolean(booleanInput);
+                    String stringResult = booleanToString(booleanValue);
+            
+                    System.out.println("String equivalent: " + stringResult);
+                }
+            
+                private static String booleanToString(boolean booleanValue) {
+                    return String.valueOf(booleanValue);
+                }
+            }
+            
+            
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/22.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>23. How to convert Date to Timestamp</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.sql.Timestamp;
+            import java.util.Date;
+            
+            class DateToTimestampExample {
+                public static void main(String[] args) {
+                    // Create a Date object
+                    Date date = new Date();
+            
+                    // Convert the Date to a Timestamp
+                    Timestamp timestamp = new Timestamp(date.getTime());
+            
+                    System.out.println("Date: " + date);
+                    System.out.println("Timestamp: " + timestamp);
+                }
+            }
+            
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/23.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>25. How to convert Binary to Decimal</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.util.Scanner;
+
+            class binarytodecimal {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+            
+                    System.out.print("Enter a binary number: ");
+                    String binaryInput = scanner.nextLine();
+            
+                    if (!isValidBinary(binaryInput)) {
+                        System.out.println("Invalid binary number. Please enter a valid binary number.");
+                        return;
+                    }
+            
+                    int decimalResult = binaryToDecimal(binaryInput);
+                    System.out.println("Decimal equivalent: " + decimalResult);
+                }
+            
+                private static boolean isValidBinary(String binaryInput) {
+                    return binaryInput.matches("[01]+");
+                }
+            
+                private static int binaryToDecimal(String binaryInput) {
+                    int decimalResult = 0;
+                    int binaryLength = binaryInput.length();
+            
+                    for (int i = binaryLength - 1; i >= 0; i--) {
+                        int digit = binaryInput.charAt(i) - '0';
+                        decimalResult += digit * Math.pow(2, binaryLength - 1 - i);
+                    }
+            
+                    return decimalResult;
+                }
+            }
+            
+            
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/25.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>26. How to convert Decimal to Binary</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+           
+//How to convert Decimal to Binary
+
+
+
+class DecimalToBinary {
+   public static void main(String[] args) {
+       int decimalNumber =9;
+       
+      
+       StringBuilder binary = new StringBuilder();
+       
+       if (decimalNumber == 0) {
+           binary.append(0);
+       } else {
+           
+           while (decimalNumber > 0) {
+               int remainder = decimalNumber % 2;
+               binary.insert(0, remainder);
+               decimalNumber = decimalNumber / 2;
+           }
+       }
+       
+       System.out.println("Binary representation: "+ binary.toString());
+   }
+}
+
+
+
+
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/26.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>27. How to convert Hex to Decimal</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+           
+import java.util.Scanner;
+
+class ` 
+{
+   public static void main(String args[]) 
+   { 
+
+      System.out.println("\n How to convert Hex to Decimal.\n");
+      Scanner sc=new Scanner(System.in);
+      System.out.print(" Enter a Hex Value one  : ");
+      String Hex1 = sc.nextLine();
+
+      System.out.print(" Enter a Hex Value two  : ");
+      String Hex2 = sc.nextLine();
+
+      int dec1 = Integer.parseInt(Hex1, 16);
+      int dec2 = Integer.parseInt(Hex2, 16);
+
+      System.out.println("\n Convert Hex To Decimal value  is : " + dec1);
+      System.out.println(" Convert Hex To Decimal value is : " + dec2);
+   }
+}
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/27.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>29. How to convert Octal to Decimal</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            class GFG {
+ 
+              public static void main(String args[])
+              {
+                  
+                  String onum = "157";
+           
+                  
+                  int num = Integer.parseInt(onum, 8);
+           
+                  System.out.println(
+                      "Decimal equivalent of Octal value 157 is: "
+                      + num);
+              }
+          }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/29.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+              
+
+    <!------------------ PROGRAM  START ---------------------------------------->
+    <div class="java-practical">
+      <h2>30. How to convert Decimal to Octal</h2>
+
+      <div class="code-and-output">
+        <div class="code-container">
+          <pre><code class="language-java">
+            import java.util.Scanner;
+            class DecimalToOctal
+            {
+              public static void main(String args[])
+              {
+                Scanner input = new Scanner( System.in );
+                System.out.print("Enter a decimal number : ");
+                int num =input.nextInt();
+             
+                String octalString = Integer.toOctalString(num);
+                System.out.println("Method 1: Decimal to octal: " + octalString);
+            
+              }
+            }
+                    </code></pre>
+        </div>
+      </div>
+      <h2>Output</h2>
+      <div class="code-pic">
+        <img src="./img/30.png" alt="">
+      </div>
+    </div>
+    <hr>
+        <!------------------ PROGRAM END ---------------------------------------->
+
+        
+  </main>
+</body>
+
+</html>
